@@ -1,0 +1,145 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
+  position: relative;
+  flex-basis: 75px;
+  z-index: 1;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  height: 77px;
+  max-width: 1010px;
+  padding: 20px 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  // background-color: silver;
+  &__left {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    // background-color: yellowgreen;
+  }
+  &__right {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    // background-color: salmon;
+  }
+  &__searchbar {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    // background-color: bisque;
+  }
+}
+
+.nav-logo {
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  &__img {
+    display: flex;
+    // background-color: bisque;
+    flex-grow: 0;
+    background-image: url("../../../assets/logo.png");
+    background-size: 30px 30px;
+    flex-basis: 30px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+  &__line {
+    display: flex;
+    background-color: black;
+    flex-grow: 0;
+    flex-basis: 1px;
+    width: 1px;
+    height: 100%;
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+  &__text {
+    display: flex;
+    // background-color: chartreuse;
+    flex-grow: 1;
+    background-image: url("../../../assets/logo-text.png");
+    background-size: auto 32px;
+    background-repeat: no-repeat;
+    height: 32px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.nav-searchbar {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &__input {
+    width: 215px;
+    height: 28px;
+    padding-left: 90px;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    outline: 0;
+    box-sizing: border-box;
+    background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-128.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 72px 4px;
+    background-color: #fafafa;
+    transition: all 0.1s ease-in-out;
+    &:focus {
+      padding-left: 16px;
+      background-position: 0;
+      background-color: unset;
+    }
+  }
+}
+
+.nav-buttons {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  &__explore {
+    background-image: url("../../../assets/explore.png");
+    background-size: auto 24px;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+  }
+  &__activity {
+    background-image: url("../../../assets/activity.png");
+    background-size: auto 24px;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+  }
+  &__profile {
+    background-image: url("../../../assets/profile.png");
+    background-size: auto 24px;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 502px) {
+  .nav-searchbar {
+    display: none;
+  }
+}
