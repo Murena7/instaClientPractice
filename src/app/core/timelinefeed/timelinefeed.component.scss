@@ -1,10 +1,27 @@
 :host {
   display: flex;
+  flex-direction: row;
   flex-flow: row nowrap;
   justify-content: center;
   width: 100%;
-  background-color: #fff;
+  background-color: #fafafa;
   position: relative;
   padding-top: 60px;
   max-width: 935px;
+}
+
+.media-container {
+  margin-right: 28px;
+  max-width: 614px;
+  width: 100%;
+  flex-direction: column;
+  &__card {
+    max-width: 614px;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.timelinestoriesblock {
+
 }

@@ -1,0 +1,32 @@
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  &__img {
+    width: 612px;
+    height: 100%;
+    min-width: 612px;
+    min-height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    transition: all 1s ease-in-out;
+  }
+
+  &__button-left {
+    position: absolute;
+    align-self: center;
+    left: 0;
+    padding: 16px 8px;
+    background-color: red;
+  }
+
+  &__button-right {
+    position: absolute;
+    align-self: center;
+    right: 0;
+    padding: 16px 8px;
+    background-color: red;
+  }
+}

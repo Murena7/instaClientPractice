@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  height: 60px;
+  padding: 16px;
+}
+
+.card-user-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ED4956;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__element {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.card-user-name {
+  &__text {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

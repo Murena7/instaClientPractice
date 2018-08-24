@@ -3,11 +3,20 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, .0975);
   position: relative;
-  flex-basis: 75px;
+  min-height: 77px;
   z-index: 1;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .nav-container {
@@ -17,8 +26,6 @@
   max-width: 1010px;
   padding: 20px 40px;
   width: 100%;
-  position: fixed;
-  top: 0;
   // background-color: silver;
   &__left {
     display: flex;
@@ -97,7 +104,7 @@
     background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-128.png);
     background-size: 16px;
     background-repeat: no-repeat;
-    background-position: 72px 4px;
+    background-position: 72px 6px;
     background-color: #fafafa;
     transition: all 0.1s ease-in-out;
     &:focus {

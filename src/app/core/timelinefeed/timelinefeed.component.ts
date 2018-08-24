@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InstagramApiService } from '../services/instagram-api.service';
 
 @Component({
   selector: 'app-timelinefeed',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelinefeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(public instagramApiService: InstagramApiService) { }
 
   ngOnInit() {
+
   }
 
 }

@@ -1,3 +1,6 @@
-<p>
-  timelinefeed works!
-</p>
+<div class="media-container">
+  <ng-container *ngFor="let card of instagramApiService.ArrayUserMedia">
+    <app-mediacard [mediaCardInputData]="card" class="media-container__card"></app-mediacard>
+  </ng-container>
+</div>
+<app-timelinestoriesblock class="timelinestoriesblock"></app-timelinestoriesblock>

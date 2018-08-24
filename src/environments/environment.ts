@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  instagramApiUrl: 'https://api.instagram.com/v1/',
+  instagramStaticAccessToken: '1472909440.27c1f51.fa61028b329d422ea9849046e7e54248',
 };
 
 /*

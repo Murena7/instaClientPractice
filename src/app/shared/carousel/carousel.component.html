@@ -1,0 +1,9 @@
+<div class="carousel-container">
+  <div [style.transform]="carouselNavigate.style" class="carousel-container__wrapper">
+    <ng-container *ngFor="let image of carouselInputData">
+      <img class="carousel-container__img" src="{{image.standard_resolution.url}}">
+    </ng-container>
+  </div>
+  <button *ngIf="buttonLeft" class="carousel-container__button-left" (click)="moveCarousel(false)"></button>
+  <button *ngIf="buttonRight" class="carousel-container__button-right" (click)="moveCarousel(true)"></button>
+</div>
