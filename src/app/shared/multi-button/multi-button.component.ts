@@ -15,7 +15,6 @@ export class MultiButtonComponent implements OnInit {
   ngOnInit() {}
 
   buttonToggler(buttonName: string) {
-    console.log(this.buttonTypeParameters.className['button' + buttonName]);
     this.buttonTypeParameters.className['button' + buttonName] = !this
       .buttonTypeParameters.className['button' + buttonName];
     this.buttonTypeParameters.className['button' + buttonName + '_active'] = !this
