@@ -15,4 +15,11 @@ export const ButtonsStyle = {
       width: '40px',
     },
   } as ButtonType,
+  save: {
+    className: { buttonsave: true, buttonsave_active: false },
+    wrapperSize: {
+      height: '40px',
+      width: '40px',
+    },
+  } as ButtonType,
 };

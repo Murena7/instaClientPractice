@@ -13,6 +13,14 @@
       <app-multi-button #like [buttonTypeParameters]="buttonsStyle.like" (click)='like.buttonToggler("like")'></app-multi-button>
       <app-multi-button [buttonTypeParameters]="buttonsStyle.comment"></app-multi-button>
     </div>
-    <div class="card-footer__icons-right"></div>
+    <div class="card-footer__icons-right">
+        <app-multi-button #save [buttonTypeParameters]="buttonsStyle.save" (click)='save.buttonToggler("save")'></app-multi-button>
+    </div>
+  </div>
+  <div class="card-footer__likes">{{mediaCardInputData.likes.count}} отметок "Нравится"</div>
+  <div class="card-footer__author"><span><a href="">{{mediaCardInputData.caption.from.username}}</a>{{mediaCardInputData.caption.text}}</span></div>
+  <div class="card-footer__time">{{getTimeDifference()}}</div>
+  <div class="card-footer__addcomment">
+      <textarea placeholder="Добавьте комментарий..."></textarea>
   </div>
 </div>

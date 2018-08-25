@@ -31,4 +31,12 @@ export class MediacardComponent implements OnInit {
       this.carouselOutputData = new Array(this.mediaCardInputData.images);
     }
   }
+
+  getTimeDifference() {
+    const timeNow: number = new Date().getTime();
+    const timeDifference = new Date(
+      timeNow - parseInt(this.mediaCardInputData.created_time, 10)
+    );
+    return `${timeDifference.getDate()}.${timeDifference.getMonth()}.${timeDifference.getFullYear()}`;
+  }
 }
