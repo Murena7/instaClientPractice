@@ -1,0 +1,30 @@
+.button-wrapper {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &__element {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background-color: unset;
+  }
+}
+
+.buttonlike {
+  background-image: url("./../../../assets/sprite2.png");
+  background-size: 203px 162px;
+  background-position: -104px -50px;
+  &_active {
+    background-image: url("./../../../assets/sprite2.png");
+    background-size: 203px 162px;
+    background-position: -104px -25px;
+  }
+}
+
+.buttoncomment {
+  background-image: url("./../../../assets/sprite2.png");
+  background-size: 203px 162px;
+  background-position: -50px -138px;
+}

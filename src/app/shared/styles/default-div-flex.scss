@@ -1,0 +1,7 @@
+@mixin div-flex-default {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}

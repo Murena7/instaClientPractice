@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, DoCheck } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Images } from '../types/userMedia';
 
 @Component({
@@ -6,7 +6,7 @@ import { Images } from '../types/userMedia';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements OnInit, DoCheck {
+export class CarouselComponent implements OnInit {
   buttonLeft: boolean;
   buttonRight: boolean;
   carouselNavigate = {
@@ -14,11 +14,11 @@ export class CarouselComponent implements OnInit, DoCheck {
     style: '',
     position: 1
   };
+  carouselInputData: Array<Images> = undefined;
 
   constructor() {}
-  @Input() carouselInputData: Array<Images>;
-
-  ngOnInit() {
+  @Input() set carouselInputFunction(value: Array<Images>) {
+    this.carouselInputData = value;
     if (this.carouselInputData.length > 1) {
       this.buttonRight = true;
       this.carouselNavigate.xValue = 0;
@@ -27,7 +27,7 @@ export class CarouselComponent implements OnInit, DoCheck {
     }
   }
 
-  ngDoCheck() {
+  ngOnInit() {
 
   }
 

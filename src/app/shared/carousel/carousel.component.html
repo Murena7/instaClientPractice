@@ -4,6 +4,10 @@
       <img class="carousel-container__img" src="{{image.standard_resolution.url}}">
     </ng-container>
   </div>
-  <button *ngIf="buttonLeft" class="carousel-container__button-left" (click)="moveCarousel(false)"></button>
-  <button *ngIf="buttonRight" class="carousel-container__button-right" (click)="moveCarousel(true)"></button>
+  <button *ngIf="buttonLeft" class="carousel-container__button-left" (click)="moveCarousel(false)">
+    <div></div>
+  </button>
+  <button *ngIf="buttonRight" class="carousel-container__button-right" (click)="moveCarousel(true)">
+    <div></div>
+  </button>
 </div>

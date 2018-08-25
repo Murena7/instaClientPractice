@@ -1,9 +1,18 @@
 <header class="card-header">
-<div class="card-user-img">
-  <img class="card-user-img__element" src="{{mediaCardInputData.user.profile_picture}}">
-</div>
-<div class="card-user-name">
-  <span class="card-user-name__text">{{mediaCardInputData.user.username}}</span>
-</div>
+  <div class="card-user-img">
+    <img class="card-user-img__element" src="{{mediaCardInputData.user.profile_picture}}">
+  </div>
+  <div class="card-user-name">
+    <span class="card-user-name__text">{{mediaCardInputData.user.username}}</span>
+  </div>
 </header>
-<app-carousel [carouselInputData]="carouselOutputData"></app-carousel>
+<app-carousel [carouselInputFunction]="carouselOutputData"></app-carousel>
+<div class="card-footer">
+  <div class="card-footer__icons">
+    <div class="card-footer__icons-left">
+      <app-multi-button #like [buttonTypeParameters]="buttonsStyle.like" (click)='like.buttonToggler("like")'></app-multi-button>
+      <app-multi-button [buttonTypeParameters]="buttonsStyle.comment"></app-multi-button>
+    </div>
+    <div class="card-footer__icons-right"></div>
+  </div>
+</div>

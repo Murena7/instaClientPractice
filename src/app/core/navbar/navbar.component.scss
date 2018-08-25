@@ -2,51 +2,47 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
-  position: relative;
+  align-items: stretch;
   min-height: 77px;
   z-index: 1;
 }
 
 .nav-wrapper {
+  width: 100%;
   position: fixed;
   top: 0;
-  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, .0975);
   background-color: #fff;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  height: 77px;
 }
 
 .nav-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 77px;
   max-width: 1010px;
-  padding: 20px 40px;
   width: 100%;
-  // background-color: silver;
+  padding: 26px 40px;
   &__left {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
-    // background-color: yellowgreen;
+    flex-basis: 0; // background-color: yellowgreen;
   }
   &__right {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
-    // background-color: salmon;
+    flex-basis: 0; // background-color: salmon;
   }
   &__searchbar {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
-    // background-color: bisque;
+    flex-basis: 0; // background-color: bisque;
   }
 }
 
@@ -56,36 +52,26 @@
   align-content: center;
   justify-content: flex-start;
   &__img {
-    display: flex;
     // background-color: bisque;
-    flex-grow: 0;
-    background-image: url("../../../assets/logo.png");
-    background-size: 30px 30px;
-    flex-basis: 30px;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-  }
-  &__line {
-    display: flex;
-    background-color: black;
-    flex-grow: 0;
-    flex-basis: 1px;
-    width: 1px;
-    height: 100%;
-    margin-left: 18px;
-    margin-right: 18px;
+    flex-grow: 1;
+    background-image: url("../../../assets/sprite.png");
+    background-position: -326px -338px;
+    background-size: 438px 426px;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
   }
   &__text {
-    display: flex;
-    // background-color: chartreuse;
+    // background-color: bisque;
     flex-grow: 1;
-    background-image: url("../../../assets/logo-text.png");
-    background-size: auto 32px;
-    background-repeat: no-repeat;
-    height: 32px;
-    position: relative;
-    top: 2px;
+    background-image: url("../../../assets/sprite.png");
+    background-size: 438px 426px;
+    background-position: -93px -149px;
+    max-width: 176px;
+    width: 100%;
+    height: 35px;
   }
 }
 

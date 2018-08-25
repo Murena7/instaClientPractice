@@ -1,23 +1,26 @@
-import { Component, OnInit, DoCheck, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserMedia, Images } from '../types/userMedia';
+import { ButtonsStyle } from '../multi-button/buttonsStyle';
 
 @Component({
   selector: 'app-mediacard',
   templateUrl: './mediacard.component.html',
   styleUrls: ['./mediacard.component.scss'],
 })
-export class MediacardComponent implements OnInit, DoCheck {
-  constructor() {}
-  @Input()
+export class MediacardComponent implements OnInit {
   mediaCardInputData: UserMedia;
+  buttonsStyle = ButtonsStyle;
 
+  constructor() {}
   carouselOutputData: Array<Images>;
 
-  ngOnInit() {
+  @Input()
+  set mediaCardInputFunction(value: UserMedia) {
+    this.mediaCardInputData = value;
     this.carouselOutputDataFormatter();
   }
 
-  ngDoCheck() {}
+  ngOnInit() {}
 
   carouselOutputDataFormatter() {
     if (this.mediaCardInputData.carousel_media) {

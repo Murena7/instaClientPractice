@@ -1,21 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "./app/shared/styles/default-body.scss";
+@import "./app/shared/styles/default-html.scss";
+@import "./app/shared/styles/default-div-flex.scss";
 * {
   box-sizing: border-box;
 }
 
 html {
-  height: 100%;
-  margin: 0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  @include html-default;
 }
 
 body {
-  height: 100%;
-  margin: 0;
+  @include body-default;
 }
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
+
+div,app-root, app-navbar, app-timelinefeed, app-carousel, app-mediacard, app-timelinestoriesblock {
+  @include div-flex-default;
+}
+
+
