@@ -1,5 +1,18 @@
 :host {
-  display: flex;
+  max-width: 293px;
+  position: relative;
+  width: 100%;
   flex-grow: 1;
+  margin-bottom: 30px;
+  padding: 0;
+  background-color: silver;
+}
+
+.timeline-stories-container {
   background-color: olivedrab;
+  height: 100vh;
+  padding: 0;
+  max-width: 293px;
+  position: absolute;
+  width: 100%;
 }
