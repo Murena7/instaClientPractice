@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { OwnerData } from '../types/ownerData';
 
 @Component({
   selector: 'app-timelinestoriesblock',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class TimelinestoriesblockComponent implements OnInit {
 
   constructor() { }
+
+  @Input() ownerData: OwnerData;
 
   ngOnInit() {
   }

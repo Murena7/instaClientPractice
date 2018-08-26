@@ -1,3 +1,42 @@
-<div class="timeline-stories-container">
-
+<div *ngIf="ownerData" class="timeline-stories-container">
+  <div class="owner-container">
+    <div class="owner-container__profile-img">
+      <img src="{{ownerData.profile_picture}}">
+    </div>
+    <div class="owner-container__profile-text">
+      <div class="owner-container__profile-username">{{ownerData.username}}</div>
+      <div class="owner-container__profile-fullname">{{ownerData.full_name}}</div>
+    </div>
+  </div>
+  <div class="stories-container">
+    <div class="stories-container-header">
+      <div class="stories-container-header__left">Истории</div>
+      <div class="stories-container-header__right">Смотреть все</div>
+    </div>
+    <div class="stories-container-body">
+      <div class="stories-container-body__user-img">
+          <img src="{{ownerData.profile_picture}}">
+          <div class="stories-container-body__img-border"></div>
+      </div>
+      <div class="stories-container-body__user-text">
+        <div class="stories-container-body__user-username">{{ownerData.username}}</div>
+        <div class="stories-container-body__user-fullname">11 часов назад</div>
+      </div>
+    </div>
+  </div>
+  <div class="stories-footer">
+      <ul class="stories-footer__list">
+        <li>О нас</li>
+        <li>Поддержка</li>
+        <li>Пресса</li>
+        <li>API</li>
+        <li>Вакансии</li>
+        <li>Конфиденциальность</li>
+        <li>Условия</li>
+        <li>Директория</li>
+        <li>Профили</li>
+        <li>Хэштеги</li>
+      </ul>
+  </div>
+  <div class="stories-copyright">© 2018 INSTAGRAM</div>
 </div>

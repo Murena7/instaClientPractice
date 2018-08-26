@@ -1,6 +1,6 @@
 <div class="media-container">
-  <ng-container *ngFor="let card of instagramApiService.ArrayUserMedia">
+  <ng-container *ngFor="let card of instagramApiService.userMedia">
     <app-mediacard [mediaCardInputFunction]="card" class="media-container__card"></app-mediacard>
   </ng-container>
 </div>
-<app-timelinestoriesblock class="timelinestoriesblock"></app-timelinestoriesblock>
+<app-timelinestoriesblock [ownerData]="instagramApiService.ownerData"></app-timelinestoriesblock>
