@@ -14,11 +14,14 @@ export class CarouselComponent implements OnInit {
     style: '',
     position: 1
   };
+  carouselBoxPudding: string = undefined;
   carouselInputData: Array<Images> = undefined;
 
   constructor() {}
   @Input() set carouselInputFunction(value: Array<Images>) {
     this.carouselInputData = value;
+    this.carouselBoxPudding = `${Math.round((value[0].standard_resolution.height / value[0].standard_resolution.width) * 100).toFixed(2)}%`;
+    console.log(this.carouselBoxPudding);
     if (this.carouselInputData.length > 1) {
       this.buttonRight = true;
       this.carouselNavigate.xValue = 0;
@@ -32,7 +35,7 @@ export class CarouselComponent implements OnInit {
   }
 
   public moveCarousel(moveSide) {
-    const moveStep = 100 / this.carouselInputData.length;
+    const moveStep = 100;
     if (moveSide) {
       this.carouselNavigate.xValue -= moveStep;
       this.carouselNavigate.position += 1;
