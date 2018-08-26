@@ -1,4 +1,4 @@
-<div *ngIf="ownerData" class="timeline-stories-container">
+<div *ngIf="ownerData" [class.timeline-stories-container_fixed]="fixeBlock" class="timeline-stories-container">
   <div class="owner-container">
     <div class="owner-container__profile-img">
       <img src="{{ownerData.profile_picture}}">

@@ -1,8 +1,8 @@
-<nav class="nav-wrapper">
-  <div class="nav-container">
+<nav [class.nav-wrapper_collapse]="collapseNav" class="nav-wrapper">
+  <div [class.nav-container_collapse]="collapseNav" class="nav-container">
     <div class="nav-container__left nav-logo">
-      <div class="nav-logo__img"></div>
-      <div class="nav-logo__text"></div>
+      <div [class.nav-logo__img_collapse]="collapseNav" class="nav-logo__img"></div>
+      <div [class.nav-logo__text_collapse]="collapseNav" class="nav-logo__text"></div>
     </div>
     <div class="nav-container__searchbar nav-searchbar">
       <input class="nav-searchbar__input" type="text" placeholder="Search" />

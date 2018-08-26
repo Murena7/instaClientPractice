@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { OwnerData } from '../types/ownerData';
 
 @Component({
@@ -7,10 +7,20 @@ import { OwnerData } from '../types/ownerData';
   styleUrls: ['./timelinestoriesblock.component.scss']
 })
 export class TimelinestoriesblockComponent implements OnInit {
+  fixeBlock = false;
 
   constructor() { }
 
   @Input() ownerData: OwnerData;
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const scrollPosition = window.pageYOffset;
+    if (window.pageYOffset > 60) {
+      this.fixeBlock = true;
+    } else {
+      this.fixeBlock = false;
+    }
+  }
 
   ngOnInit() {
   }

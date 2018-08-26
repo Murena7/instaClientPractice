@@ -21,7 +21,6 @@ export class CarouselComponent implements OnInit {
   @Input() set carouselInputFunction(value: Array<Images>) {
     this.carouselInputData = value;
     this.carouselBoxPudding = `${Math.round((value[0].standard_resolution.height / value[0].standard_resolution.width) * 100).toFixed(2)}%`;
-    console.log(this.carouselBoxPudding);
     if (this.carouselInputData.length > 1) {
       this.buttonRight = true;
       this.carouselNavigate.xValue = 0;
