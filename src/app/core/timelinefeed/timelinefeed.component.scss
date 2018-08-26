@@ -20,3 +20,29 @@
     margin-bottom: 60px;
   }
 }
+
+.timelinestoriesblock {
+  display: flex;
+}
+
+@media (max-width: 999px) {
+  .timelinestoriesblock {
+    display: none;
+  }
+}
+
+@media (max-width: 735px) {
+  .media-container__card {
+    margin-bottom: 15px;
+  }
+  .media-container {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  :host {
+    background-color: white;
+    padding-top: 0;
+  }
+}

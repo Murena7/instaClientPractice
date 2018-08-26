@@ -6,3 +6,9 @@
   min-height: 100%;
   overflow: hidden;
 }
+
+@media (max-width: 640px) {
+  :host {
+    background-color: white;
+  }
+}

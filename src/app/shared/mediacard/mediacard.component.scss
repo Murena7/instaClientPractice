@@ -124,3 +124,17 @@
     }
   }
 }
+
+@media (max-width: 735px) {
+  .card-footer__addcomment {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  :host {
+    border-radius: unset;
+    border: unset;
+    align-items: stretch;
+  }
+}
