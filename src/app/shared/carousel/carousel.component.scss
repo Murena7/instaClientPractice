@@ -1,5 +1,6 @@
 :host {
   display: flex;
+  flex-direction: column;
 }
 
 .carousel-container {
@@ -13,22 +14,19 @@
     height: 100%;
     width: 100%;
   }
-
   &__img-wrapper {
     position: absolute;
     top: 0;
     left: 0;
   }
-
   &__wrapper {
     display: flex;
     flex: auto;
     align-self: center;
     flex-direction: row;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     position: relative;
   }
-
   &__button-left {
     border: 0;
     position: absolute;
@@ -52,7 +50,6 @@
       background-repeat: no-repeat;
     }
   }
-
   &__button-right {
     border: 0;
     position: absolute;
@@ -74,6 +71,24 @@
       background-image: url("../../../assets/carousel-right.png");
       background-size: cover;
       background-repeat: no-repeat;
+    }
+  }
+}
+
+.carousel-position {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  &__element {
+    background: #dbdbdb;
+    margin-right: 4px;
+    border-radius: 50%;
+    height: 6px;
+    transition: all .2s ease-in-out;
+    width: 6px;
+    &_active {
+      background: #3897f0;
     }
   }
 }

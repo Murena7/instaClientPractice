@@ -13,3 +13,9 @@
     <div></div>
   </button>
 </div>
+<ng-container *ngIf="carouselInputData.length > 1">
+  <div class="carousel-position">
+    <div *ngFor="let element of carouselInputData; let i = index" [class.carousel-position__element_active]="carouselNavigate.position===i+1"
+      class="carousel-position__element"></div>
+  </div>
+</ng-container>

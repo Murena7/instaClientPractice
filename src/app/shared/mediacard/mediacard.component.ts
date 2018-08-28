@@ -18,6 +18,7 @@ export class MediacardComponent implements OnInit {
   set mediaCardInputFunction(value: UserMedia) {
     this.mediaCardInputData = value;
     this.carouselOutputDataFormatter();
+    console.log(this.mediaCardInputData);
   }
 
   ngOnInit() {}
@@ -33,10 +34,8 @@ export class MediacardComponent implements OnInit {
   }
 
   getTimeDifference() {
-    const timeNow: number = new Date().getTime();
-    const timeDifference = new Date(
-      timeNow - parseInt(this.mediaCardInputData.created_time, 10)
-    );
-    return `${timeDifference.getDate()}.${timeDifference.getMonth()}.${timeDifference.getFullYear()}`;
+    const tempTime = parseInt(this.mediaCardInputData.created_time, 10) * 1000;
+    const createdTime = new Date(tempTime);
+    return `${createdTime.getDate()}.${createdTime.getMonth() + 1}.${createdTime.getFullYear()}`;
   }
 }

@@ -1,0 +1,10 @@
+<div class="miniuserblock-container">
+  <div class="miniuserblock-container__img">
+    <img src="{{ownerData.profile_picture}}">
+    <div *ngIf="stories" class="miniuserblock-container__border"></div>
+  </div>
+  <div class="miniuserblock-container__text">
+    <div class="miniuserblock-container__username">{{ownerData.username}}</div>
+    <div class="miniuserblock-container__extratext">{{ownerData.full_name}}</div>
+  </div>
+</div>

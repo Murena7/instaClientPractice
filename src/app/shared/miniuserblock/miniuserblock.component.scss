@@ -1,0 +1,37 @@
+.miniuserblock-container {
+  height: 62px;
+  flex-direction: row;
+  justify-content: flex-start;
+  &__img {
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+  }
+  &__text {
+    margin-left: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__username {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &__extratext {
+    color: #999;
+    font-size: 12px;
+  }
+  &__border {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border: 2px solid red;
+    border-radius: 50%;
+  }
+}
